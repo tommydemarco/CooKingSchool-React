@@ -5,11 +5,16 @@
     box-shadow: 0 3rem 8rem rgba(0, 0, 0, .3);
     min-height:50rem;
     position:relative;
+    @include respond(ltab) {
+        margin: 0 auto;
+        width:100%;
+        max-width:100%;
+    }
 }
 .header {
     background-color: #fff;
     border-bottom: $grey-mid;
-    height:8rem;
+    height:9rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +22,9 @@
 }
 .content {
     display:flex;
+    @include respond(ptab) {  
+        flex-direction: column; 
+    }
 }
 .sidebar {
     background-color: $grey-dark;
@@ -32,7 +40,8 @@
 }
 .footer {
     min-height: 5rem;
-    background-color: white;
+    background-color: $white-d;
     border-top:$grey-mid;
+    padding: 4rem 10rem;
 }
 

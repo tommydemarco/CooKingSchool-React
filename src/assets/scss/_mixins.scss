@@ -1,0 +1,16 @@
+//MEDIA QUERY MIXIN
+//MEDIA QUERY MANAGER 
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };
+    }
+    @if $breakpoint == ptab {
+        @media only screen and (max-width: 50em) { @content };
+    }
+    @if $breakpoint == ltabs {
+        @media only screen and (max-width: 68em) { @content };
+    }
+    @if $breakpoint == ltab {
+        @media only screen and (max-width: 75em) { @content };
+    }
+}

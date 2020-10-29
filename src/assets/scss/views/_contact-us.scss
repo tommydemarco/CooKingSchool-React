@@ -1,0 +1,78 @@
+.contact-us {
+    width:100%;
+    height:100%;
+}
+.detail {
+    display:flex;
+    padding:4rem;
+    align-items: flex-start;
+    @include respond(ptab) {  
+        padding:3rem;
+    }
+    @include respond(phone) {  
+        flex-direction: column;
+    }
+}
+.form-container {
+    flex:0 0 60%;
+    margin-right: 4rem;
+    background-color: white;
+    padding: 3rem;
+    border-radius:5px;
+    @include respond(ptab) {  
+        margin-right: 3rem;
+        padding: 2rem;
+    }
+    @include respond(phone) {  
+        margin-right: 0;
+        margin-bottom:2rem;
+        width:100%;
+    }
+    & .paragraph:not(:last-child) {
+        margin-bottom: 1.5rem; 
+        @include respond(ptab) {  
+            margin-bottom:0rem;
+        }
+    }
+}
+
+
+.form {
+    width:100%;
+    &__title {
+        margin-bottom:2rem;
+        margin-left:1.5rem
+    }
+    &__input {
+        width:100%;
+        display:block; 
+        border: 2px solid transparent;
+        border-radius: 30px;
+        margin-bottom:3rem;
+        background-color:$white-d;
+        padding: 1.2rem 2.5rem;
+        font-size:1.6rem;
+        font-family:inherit;
+        &:focus {
+            outline:none;
+            border: 2px solid $col-pri-1;
+        }
+        &--textarea{
+            resize:none;
+            height:10rem;
+        }
+    }
+}
+
+//========> RATINGS LAYOUT
+.form-aside {
+    background-color: white;
+    padding: 3rem;
+    border-radius:5px;
+    position:relative;
+    overflow:hidden;
+    &__text {
+        font-size: 1.5rem;
+        color: $grey-dark; 
+    } 
+}

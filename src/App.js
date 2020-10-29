@@ -4,7 +4,8 @@ import './assets/css/style.css';
 import TheHeader from './components/layouts/TheHeader';
 import TheFooter from './components/layouts/TheFooter';
 import TheSideNav from './components/layouts/TheSideNav';
-import TheMaine from './components/TheMaine';
+import SingleCourse from './components/views/SingleCourse';
+import ContactUs from './components/views/ContactUs';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <TheHeader />
         <div className="content">
           <TheSideNav />
-          <TheMaine />
+          <ContactUs />
         </div>
         <TheFooter />
       </div>

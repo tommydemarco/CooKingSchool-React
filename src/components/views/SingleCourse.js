@@ -1,10 +1,10 @@
 import React from 'react';
 
-function TheMaine() {
+function SingleCourse() {
     return(
         <main className="main">
             <div className="single-course">
-                <div className="gallery">
+                <div className="gallery"> 
                     <figure className="gallery__item">
                         <img src="/assets/img/hotel-1.jpg" className="gallery__image" />
                     </figure>
@@ -19,19 +19,19 @@ function TheMaine() {
                     <h1 className="overview__heading">Cooking course</h1>
                     <div className="overview__stars">
                         <svg className="overview__icon--star">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-star-full"></use>
                         </svg>
                         <svg className="overview__icon--star">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-star-full"></use>
                         </svg>
                         <svg className="overview__icon--star">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-star-full"></use>
                         </svg>
                         <svg className="overview__icon--star">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-star-full"></use>
                         </svg>
                         <svg className="overview__icon--star">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-star-full"></use>
                         </svg>
                     </div>
 
@@ -84,9 +84,16 @@ function TheMaine() {
                         </article>
                     </aside>
                 </div>
+                <div className="cta">
+                    <h2 className="cta__book-now">Join us in our cooking experience</h2>
+                    <button className="btn">
+                        <span className="btn__visible">Book now!</span>
+                        <span className="btn__hidden">Limited availability</span>
+                    </button>
+                </div>
             </div>
         </main>
-    )
+    );
 }
 
-export default TheMaine;
+export default SingleCourse;

@@ -6,7 +6,6 @@ $grey-light:#b2bec3;
 $grey-mid:#636e72;
 $grey-dark:#2d3436;
 
-
 //base styles
 * {
     margin:0;
@@ -22,6 +21,9 @@ $grey-dark:#2d3436;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    @include respond(ltabs) {  
+        font-size: 50%; 
+    }
 }
 
 #root {

@@ -7,40 +7,36 @@ function TheSideNav() {
                 <li className="side-nav__item side-nav__item--active">
                     <a href="/" className="side-nav__link">
                         <svg className="side-nav__icon">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-office"></use>
                         </svg>
-                        <span>Navigation</span>
+                        <span>Home</span>
                     </a>
                 </li>
                 <li className="side-nav__item">
                     <a href="/" className="side-nav__link">
                         <svg className="side-nav__icon">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-fire"></use>
                         </svg>
-                        <span>Navigation</span>
+                        <span>Courses</span>
                     </a>
                 </li>
                 <li className="side-nav__item">
                     <a href="/" className="side-nav__link">
                         <svg className="side-nav__icon">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-users"></use>
                         </svg>
-                        <span>Navigation</span>
+                        <span>Testimonials</span>
                     </a>
                 </li>
                 <li className="side-nav__item">
                     <a href="/" className="side-nav__link">
                         <svg className="side-nav__icon">
-                            <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                            <use xlinkHref="/assets/img/sprite.svg#icon-mail2"></use>
                         </svg>
-                        <span>Navigation</span>
+                        <span>Contacts</span>
                     </a>
                 </li>
             </ul>
-
-            <div className="legal">
-                You are logged in as Tommy
-            </div>
         </nav>
     );
 }

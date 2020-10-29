@@ -1,4 +1,9 @@
-
+.heading-1 {
+    font-size:2.5rem;
+    text-transform:uppercase;
+    padding:1.8rem 3rem;
+    color:$grey-dark;
+}
 .heading-3 {
     font-size: 2rem;
     color: $grey-dark;
@@ -12,4 +17,40 @@
     margin-left: 2rem;
     font-size: 1.6rem;    
     color: lighten($grey-dark, 10%);
+}
+.btn {
+    text-transform: uppercase;
+    font-size:1.6rem;
+    border:none;
+    background-image: linear-gradient(to right, $col-pri-1, $col-pri-2);
+    border-radius: 50px;  
+    color: $white;
+    overflow:hidden;
+    position:relative;
+    cursor: pointer;
+    & > * {
+        display:inline-block;
+        height:100%;
+        width:100%;
+        transition: all .3s;
+    }
+    &__visible {     
+        padding: 2rem 7rem; 
+    }
+    &__hidden {
+        display:inline-block;
+        position:absolute;
+        padding: 2rem 0rem;  
+        left:0;
+        top:-100%;
+    }
+    &:hover {
+        background-image: linear-gradient(to left, $col-pri-1, $col-pri-2); 
+    }
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+    &:hover &__hidden {
+        top:0;
+    }
 }
