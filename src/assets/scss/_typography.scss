@@ -1,0 +1,15 @@
+
+.heading-3 {
+    font-size: 2rem;
+    color: $grey-dark;
+    margin-bottom: 1.6rem;  
+}
+.paragraph {
+    font-size: 1.6rem;    
+    color: lighten($grey-dark, 10%);
+}
+.list {
+    margin-left: 2rem;
+    font-size: 1.6rem;    
+    color: lighten($grey-dark, 10%);
+}

@@ -18,17 +18,16 @@ function TheHeader() {
                     <svg className="user-nav__icon">
                         <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
                     </svg>
-                    <span className="user-nav__notification">7</span>
                 </div>
                 <div className="user-nav__icon-box">
                     <svg className="user-nav__icon">
                         <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
                     </svg>
-                    <span className="user-nav__notification">7</span>
                 </div>
-                <div className="user-nav__user">
-                    <img src="/assets/img/1.jpg" alt="" className="user-nav__user-photo" />
-                    <span className="user-nav__user-name">Tommy</span>
+                <div className="user-nav__icon-box">
+                    <svg className="user-nav__icon">
+                        <use xlinkHref="/assets/img/sprite.svg#icon-search"></use>
+                    </svg>
                 </div>
             </nav>
 
