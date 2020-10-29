@@ -21,19 +21,20 @@
 .sidebar {
     background-color: $grey-dark;
     color:$white;
-    flex: 0 0 15%;
+    flex: 0 0 19%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 .main {
     background-color: salmon;
     flex:1;
+    height: 80rem;   
 
 }
 .footer {
     min-height: 5rem;
     background-color: white;
     border-top:$grey-mid;
-    position:absolute;
-    bottom:0;
-    width: 100%;
 }
