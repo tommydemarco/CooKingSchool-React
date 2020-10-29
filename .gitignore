@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+#exclude img 
+*/img
+*.jpg
+*.png
+*.svg
+
 # testing
 /coverage
 
@@ -21,3 +27,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#exclude img 
+*/img
