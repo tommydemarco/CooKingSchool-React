@@ -9,11 +9,13 @@
         align-items: flex-end;
         border-top-left-radius:5px;
         border-top-right-radius:5px;
+        background-image: linear-gradient(to right, darken($col-pri-1, 20%), darken($col-pri-2, 20%));
     }
     &__image {
         width:100%;
         transform: scale(1);
         transition: all .3s;
+        opacity:0.75;
     }
     &__title {
         font-size:2.4rem;

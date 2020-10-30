@@ -1,7 +1,63 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import CourseCard from '../cards/CourseCard';
+import Loader from '../elements/Loader';
+import FetchingError from '../elements/FetchingError';
 
 function TheCourses() {
-    return(
+    const url = 'https://djshortcats.website/api/cooking/list/';
+
+    const [courses, setCourse] = useState({
+        isLoading: false,
+        data: null,
+        error: false
+    });
+
+    useEffect(() => {
+        setCourse({
+            isLoading:true,
+            data:null,
+            error:false
+        })
+        axios.get(url)
+            .then(response => {
+                console.log(response)
+                if(!response.data.length) {
+                    setCourse({
+                        isloading:false,
+                        data: null,
+                        error: true
+                    })
+                } else {
+                    setCourse({
+                        isloading:false,
+                        data: response.data,
+                        error: false
+                    })
+                }
+            }).catch(() => setCourse({
+                    isLoading:false, 
+                    data: null,
+                    error: true
+                }));
+    }, [url])
+
+    let content = ''
+
+    if (courses.error) {
+        content = <FetchingError />
+    }
+    if (courses.isLoading) {
+        content = <Loader />
+    }
+    if (courses.data) {
+        content = 
+        courses.data.map((course, key) => 
+            <CourseCard course={course} />
+        )
+    }
+
+    return (
         <main className="main">
             <div className="testimonials">
                 <div class="banner">
@@ -14,122 +70,12 @@ function TheCourses() {
                     </header>
                 </div>
                 <div className="detail sb">
-                    <article className="course-card column-half">
-                        <header>
-                            <div className="course-card__img-container">
-                                <img className="course-card__image" src="/assets/img/course-1.jpg" alt=""/> 
-                            </div>
-                            <h2 className="course-card__title">Spicy cooking</h2>
-                        </header>
-                        <div className="course-card__description">
-                            <ul className="course-card__list">
-                                <li className="course-card__list-item">
-                                    40 Hours of course
-                                </li>
-                                <li className="course-card__list-item">
-                                    Maximum 10 participants
-                                </li>
-                                <li className="course-card__list-item">
-                                    Qualified chef 
-                                </li>
-                                <li className="course-card__list-item">
-                                    Course certificate
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="course-card__ending">
-                            <h4 class="course-card__price">€235</h4>
-                            <a href="/" className="course-card__button">See details</a>
-                        </div>                  
-                    </article>
-                    <article className="course-card column-half">
-                        <header>
-                            <div className="course-card__img-container">
-                                <img className="course-card__image" src="/assets/img/course-1.jpg" alt=""/> 
-                            </div>
-                            <h2 className="course-card__title">Spicy cooking</h2>
-                        </header>
-                        <div className="course-card__description">
-                            <ul className="course-card__list">
-                                <li className="course-card__list-item">
-                                    40 Hours of course
-                                </li>
-                                <li className="course-card__list-item">
-                                    Maximum 10 participants
-                                </li>
-                                <li className="course-card__list-item">
-                                    Qualified chef 
-                                </li>
-                                <li className="course-card__list-item">
-                                    Course certificate
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="course-card__ending">
-                            <h4 class="course-card__price">€235</h4>
-                            <a href="/" className="course-card__button">See details</a>
-                        </div>                  
-                    </article>
-                    <article className="course-card column-half">
-                        <header>
-                            <div className="course-card__img-container">
-                                <img className="course-card__image" src="/assets/img/course-1.jpg" alt=""/> 
-                            </div>
-                            <h2 className="course-card__title">Spicy cooking</h2>
-                        </header>
-                        <div className="course-card__description">
-                            <ul className="course-card__list">
-                                <li className="course-card__list-item">
-                                    40 Hours of course
-                                </li>
-                                <li className="course-card__list-item">
-                                    Maximum 10 participants
-                                </li>
-                                <li className="course-card__list-item">
-                                    Qualified chef 
-                                </li>
-                                <li className="course-card__list-item">
-                                    Course certificate
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="course-card__ending">
-                            <h4 class="course-card__price">€235</h4>
-                            <a href="/" className="course-card__button">See details</a>
-                        </div>                  
-                    </article>
-                    <article className="course-card column-half">
-                        <header>
-                            <div className="course-card__img-container">
-                                <img className="course-card__image" src="/assets/img/course-1.jpg" alt=""/> 
-                            </div>
-                            <h2 className="course-card__title">Spicy cooking</h2>
-                        </header>
-                        <div className="course-card__description">
-                            <ul className="course-card__list">
-                                <li className="course-card__list-item">
-                                    40 Hours of course
-                                </li>
-                                <li className="course-card__list-item">
-                                    Maximum 10 participants
-                                </li>
-                                <li className="course-card__list-item">
-                                    Qualified chef 
-                                </li>
-                                <li className="course-card__list-item">
-                                    Course certificate
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="course-card__ending">
-                            <h4 class="course-card__price">€235</h4>
-                            <a href="/" className="course-card__button">See details</a>
-                        </div>                  
-                    </article>
+                    {content}
                 </div>
             </div>
         </main>
     );
+    
 }
 
 export default TheCourses;

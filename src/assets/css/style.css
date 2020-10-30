@@ -235,9 +235,11 @@ html {
     max-height: 22rem;
     overflow: hidden;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    background-image: linear-gradient(to right, #11775c, #066c81); }
   .banner__image {
-    width: 100%; }
+    width: 100%;
+    opacity: 0.7; }
   .banner__title {
     padding-right: 2rem;
     display: flex;
@@ -287,6 +289,38 @@ html {
 
 .footer-nav__link:hover {
   color: #636e72; }
+
+.loader {
+  display: flex;
+  align-self: stretch;
+  min-height: 40rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  .loader__icon {
+    height: 6rem;
+    width: 6rem;
+    fill: #1dd1a1;
+    animation: rotate 1s linear infinite; }
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg); } }
+
+.error {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-self: stretch;
+  align-items: center; }
+  .error__container {
+    padding: 4rem;
+    background-color: #c0392b;
+    align-self: center;
+    border-radius: 5px; }
+  .error__message {
+    color: white;
+    font-size: 1.6rem; }
 
 .heading-1 {
   font-size: 2.5rem;
@@ -539,11 +573,13 @@ html {
     display: flex;
     align-items: flex-end;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    background-image: linear-gradient(to right, #11775c, #066c81); }
   .course-card__image {
     width: 100%;
     transform: scale(1);
-    transition: all .3s; }
+    transition: all .3s;
+    opacity: 0.75; }
   .course-card__title {
     font-size: 2.4rem;
     text-align: right;

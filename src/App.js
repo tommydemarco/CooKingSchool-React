@@ -9,6 +9,7 @@ import SingleCourse from './components/views/SingleCourse';
 import ContactUs from './components/views/ContactUs';
 import Testimonials from './components/views/Testimonials';
 import TheCourses from './components/views/TheCourses';
+import TheHome from './components/views/TheHome';
 
 function App() {
   return (
@@ -20,10 +21,13 @@ function App() {
             <TheSideNav />
             <Switch>
               <Route exact path="/">
-                <SingleCourse />
+                <TheHome />
               </Route>
               <Route exact path="/courses">
                 <TheCourses />
+              </Route>
+              <Route exact path="/courses/:id">
+                <SingleCourse />
               </Route>
               <Route exact path="/testimonials">
                 <Testimonials />

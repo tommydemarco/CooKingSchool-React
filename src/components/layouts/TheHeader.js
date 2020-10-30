@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function TheHeader() {
     return (
@@ -15,21 +16,27 @@ function TheHeader() {
                 </button>
             </form>
             <nav className="user-nav">
-                <div className="user-nav__icon-box">
-                    <svg className="user-nav__icon">
-                        <use xlinkHref="/assets/img/sprite.svg#icon-earth"></use>
-                    </svg>
-                </div>
-                <div className="user-nav__icon-box">
-                    <svg className="user-nav__icon">
-                        <use xlinkHref="/assets/img/sprite.svg#icon-enter"></use>
-                    </svg>
-                </div>
-                <div className="user-nav__icon-box">
-                    <svg className="user-nav__icon">
-                        <use xlinkHref="/assets/img/sprite.svg#icon-bubbles"></use>
-                    </svg>
-                </div>
+                <Link to="/">
+                    <div className="user-nav__icon-box">
+                        <svg className="user-nav__icon">
+                            <use xlinkHref="/assets/img/sprite.svg#icon-earth"></use>
+                        </svg>
+                    </div>
+                </Link>
+                <Link to="/courses">
+                    <div className="user-nav__icon-box">
+                        <svg className="user-nav__icon">
+                            <use xlinkHref="/assets/img/sprite.svg#icon-enter"></use>
+                        </svg>
+                    </div>
+                </Link>
+                <Link to="/contacts">
+                    <div className="user-nav__icon-box">
+                        <svg className="user-nav__icon">
+                            <use xlinkHref="/assets/img/sprite.svg#icon-bubbles"></use>
+                        </svg>
+                    </div>
+                </Link>
             </nav>
 
         </header>
