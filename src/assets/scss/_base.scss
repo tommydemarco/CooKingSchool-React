@@ -40,7 +40,7 @@ html {
 
 //========> REUSABLE LAYOUTS 
 .column-half {
-    flex:0 0 48.5%;
+    flex:0 0 50%;
     margin-bottom:4rem; 
     &:nth-last-child(1),
     &:nth-last-child(2) {
@@ -55,4 +55,5 @@ html {
 
 .sb {
     justify-content: space-between;
+    flex-wrap: wrap;
 }

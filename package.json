@@ -14,7 +14,7 @@
     "react-spring": "^8.0.27"
   },
   "scripts": {
-    "watchs":"node-sass src/assets/scss/main.scss src/assets/css/style.css -w",
+    "watchs": "node-sass src/assets/scss/main.scss src/assets/css/style.css -w",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
