@@ -1,0 +1,78 @@
+.course-card {
+    border-radius:5px;
+    background-color: white;
+    &__img-container {
+        max-height:20rem;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        overflow:hidden;
+        display:flex;
+        align-items: flex-end;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+    }
+    &__image {
+        width:100%;
+        transform: scale(1);
+        transition: all .3s;
+    }
+    &__title {
+        font-size:2.4rem;
+        text-align: right;
+        margin-right:2rem;
+        margin-top: -.8rem;
+    }
+    &__description {
+    }
+    &__list {
+        margin-top: 1.5rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        &-item {
+            width:70%;
+            text-align: center;
+            font-size: 1.6rem;
+            padding: 1.5rem 2rem;
+            &:not(:last-child) {
+                border-bottom: 1px solid $grey-light;
+            }
+        }
+    }
+    &__ending {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top:5rem;
+        padding-bottom:4rem;
+        background-image: linear-gradient(to bottom right, darken($grey-light, 10%) 0%, $grey-dark 70%);
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+    }
+    &__price {
+        font-size:2.5rem;
+        font-weight:300;
+        color:$white-d;
+        margin-bottom: 1.5rem;
+    }
+    &__button {
+        text-transform: uppercase;
+        font-size:1.6rem;
+        border:none;
+        padding: 1.5rem 2.5rem;
+        background-color:white;
+        border-radius: 50px;  
+        color: $grey-dark;
+        text-decoration: none;
+        font-size:600;
+        transition: all .3s;
+        &:hover {
+            background-color:$white-d; 
+        }
+    }
+    &:hover &__image {
+        transform: scale(1.15);
+    }
+    
+}

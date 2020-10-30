@@ -6,7 +6,8 @@ import TheFooter from './components/layouts/TheFooter';
 import TheSideNav from './components/layouts/TheSideNav';
 import SingleCourse from './components/views/SingleCourse';
 import ContactUs from './components/views/ContactUs';
-
+import Testimonials from './components/views/Testimonials';
+import TheCourses from './components/views/TheCourses';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <TheHeader />
         <div className="content">
           <TheSideNav />
-          <ContactUs />
+          <SingleCourse />
         </div>
         <TheFooter />
       </div>

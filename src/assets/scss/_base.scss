@@ -37,3 +37,22 @@ html {
     top: 0;
     width: 100%;
 }
+
+//========> REUSABLE LAYOUTS 
+.column-half {
+    flex:0 0 48.5%;
+    margin-bottom:4rem; 
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+       margin-bottom:0;
+    }
+    @include respond(phone) {  
+        &:nth-last-child(2) {
+            margin-bottom:4rem; 
+        }
+    }
+}
+
+.sb {
+    justify-content: space-between;
+}
