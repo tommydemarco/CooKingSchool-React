@@ -18,10 +18,10 @@ function SingleCourse() {
 
     let content = '';
     
-    if(course.error || testimonials.error) {
+    if(course.error || testimonials.error || course_contents.error) {
         content = <FetchingError errorMessage="404"/>
     }
-    if (course.loading || testimonials.loading) {
+    if (course.isLoading || testimonials.isLoading || course_contents.isLoading) {
         content = <Loader />
     }
     if(course.data && testimonials.data && course_contents.data) {
@@ -30,9 +30,9 @@ function SingleCourse() {
         testimonials.data = testimonials.data.slice(0,2)
         content = 
             <div className="single-course">
-                <div class="banner">
-                    <div class="banner__image-container">
-                        <img src={course.data.image} alt="" class="banner__image" />
+                <div className="banner">
+                    <div className="banner__image-container">
+                        <img src={course.data.image} alt="" className="banner__image" />
                     </div>
                     <header className="overview">
                         <h1 className="overview__heading">{course.data.name}</h1>

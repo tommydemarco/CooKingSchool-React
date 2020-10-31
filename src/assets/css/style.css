@@ -290,10 +290,20 @@ html {
 .footer-nav__link:hover {
   color: #636e72; }
 
+.footer__legal {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+
+.footer .paragraph {
+  font-size: 1.4rem;
+  line-height: 1.7; }
+
 .loader {
   display: flex;
   align-self: stretch;
-  min-height: 40rem;
+  min-height: 23rem;
   justify-content: center;
   align-items: center;
   width: 100%; }
@@ -630,3 +640,6 @@ html {
       background-color: #e7e7e7; }
   .course-card:hover .course-card__image {
     transform: scale(1.15); }
+
+.legal {
+  font-size: 140%; }

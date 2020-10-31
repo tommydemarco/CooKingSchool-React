@@ -5,7 +5,7 @@ function TheFooter() {
     return (
         <footer className="footer">
             <nav className="footer-nav">
-                <ul class="footer-nav__list">
+                <ul className="footer-nav__list">
                     <li className="footer-nav__item">
                         <Link to="/cookies-policy" className="footer-nav__link">Cookie policy</Link>
                     </li>
@@ -20,6 +20,12 @@ function TheFooter() {
                     </li>
                 </ul>
             </nav>
+            <div className="footer__legal">
+                <p className="paragraph">
+                    This website is only a personal project and has no commercial/representational purposes. <br/>
+                    <b>This website does not represent any real company.</b>
+                </p>
+            </div>
         </footer>
     );
 }

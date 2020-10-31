@@ -38,7 +38,6 @@ function TheHeader() {
                     </div>
                 </Link>
             </nav>
-
         </header>
     );
 }

@@ -7,12 +7,12 @@ function TestimonialCard(props){
                 {props.testimonial.review}
             </blockquote>
             <div className="review__user">
-                <img src={props.testimonial.image} alt="" class="review__image" />
+                <img src={props.testimonial.image} alt="" className="review__image" />
                 <div className="review__user-box">
                     <h4 className="review__user-name">{props.testimonial.name}</h4>
                     <p className="review__user-location">{props.testimonial.location}</p>
                 </div>
-                <div class="review__rating">{props.testimonial.rating}</div>
+                <div className="review__rating">{props.testimonial.rating}</div>
             </div>
         </article>
     )

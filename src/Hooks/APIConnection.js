@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios'
 
 export function useConnectAxiosGet(url) {
@@ -14,7 +14,9 @@ export function useConnectAxiosGet(url) {
             data: null,
             error: false
         })
-        axios.get(url)
+        //making the request last longer so that the cool loader remains more
+        setTimeout(() => {
+            axios.get(url)
             .then((request) => {
                 if (request.data.length === 1) {
                     setRequest({
@@ -42,6 +44,8 @@ export function useConnectAxiosGet(url) {
                         error: true
                     })
             })
+        }, 1500)
+        
     }, [url]);
     return request
 }

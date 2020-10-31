@@ -1,6 +1,8 @@
 import React from 'react';
 import './assets/css/style.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import ScrollToTop from './components/utilities/ScrollToTop';
 
 import TheHeader from './components/layouts/TheHeader';
 import TheFooter from './components/layouts/TheFooter';
@@ -18,6 +20,7 @@ function App() {
     <div className="app">
       <div className="container">
         <Router>
+          <ScrollToTop />
           <TheHeader />
           <div className="content">
             <TheSideNav />

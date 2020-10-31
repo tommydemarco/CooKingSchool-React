@@ -8,6 +8,7 @@ function TheHome() {
     const testimonials_url = 'https://djshortcats.website/api/cooking/testimonials/';
 
     let testimonials = useConnectAxiosGet(testimonials_url);
+    
 
     let content = '';
     if (testimonials.error) {
@@ -17,7 +18,9 @@ function TheHome() {
         content = <Loader />
     }
     if (testimonials.data) {
+        testimonials.data = testimonials.data.sort(function() { return Math.random() - 0.5 }) 
         testimonials.data = testimonials.data.slice(0, 2)
+        //making the loader show for longer cause it's really cool
         content = 
         testimonials.data.map((testimonial, key) => 
             <TestimonialCard key={key} testimonial={testimonial} />
@@ -26,9 +29,9 @@ function TheHome() {
     return(
         <main className="main">
             <div className="the-home">
-                <div class="banner">
-                    <div class="banner__image-container">
-                        <img src="/assets/img/home-banner.jpg" alt="" class="banner__image" />
+                <div className="banner">
+                    <div className="banner__image-container">
+                        <img src="/assets/img/home-banner.jpg" alt="" className="banner__image" />
                     </div>
                     <header className="banner__title">
                         <h1 className="heading-1">Welcome to our cooking school</h1>

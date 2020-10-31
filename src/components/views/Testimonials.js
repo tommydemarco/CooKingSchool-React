@@ -24,9 +24,9 @@ function Testimonials() {
     return (
         <main className="main">
             <div className="testimonials">
-                <div class="banner">
-                    <div class="banner__image-container">
-                        <img src="/assets/img/testimonials.jpg" alt="" class="banner__image" />
+                <div className="banner">
+                    <div className="banner__image-container">
+                        <img src="/assets/img/testimonials.jpg" alt="" className="banner__image" />
                     </div>
                     <header className="banner__title">
                         <h1 className="heading-1">Testimonials</h1>

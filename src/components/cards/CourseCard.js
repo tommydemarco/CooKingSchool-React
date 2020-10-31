@@ -19,7 +19,7 @@ function CourseCard(props) {
                 </ul>
             </div>
             <div className="course-card__ending">
-                <h4 class="course-card__price">€{props.course.price}</h4>
+                <h4 className="course-card__price">€{props.course.price}</h4>
                 <Link to={`/courses/${props.course.id}`} className="course-card__button">See details</Link>
             </div>                  
         </article>

@@ -5,7 +5,7 @@ function TheSideNav() {
     const activeLink = 'side-nav__link--active';
     return (
         <nav className="sidebar">
-            <ul class="side-nav"> 
+            <ul className="side-nav"> 
                 <li className="side-nav__item">
                     <NavLink exact to="/" activeClassName={activeLink} className="side-nav__link">
                         <svg className="side-nav__icon">

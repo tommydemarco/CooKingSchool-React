@@ -4,9 +4,9 @@ function ContactUs() {
     return(
         <main className="main">
             <div className="contact-us">
-                <div class="banner">
-                    <div class="banner__image-container">
-                        <img src="/assets/img/contacts.jpg" alt="" class="banner__image" />
+                <div className="banner">
+                    <div className="banner__image-container">
+                        <img src="/assets/img/contacts.jpg" alt="" className="banner__image" />
                     </div>
                     <header className="banner__title">
                         <h1 className="heading-1">Contact us</h1>

@@ -252,12 +252,24 @@
         color:$grey-mid;
     }
 }
+.footer {
+    &__legal {
+        margin-top: 3rem;
+        display:flex;
+        justify-content: center;
+        text-align: center;
+    } 
+    & .paragraph {
+        font-size: 1.4rem;
+        line-height:1.7
+    }
+}
 
 //============> LOADER
 .loader {
     display: flex;
     align-self: stretch;
-    min-height:40rem;
+    min-height:23rem;
     justify-content: center;
     align-items: center;
     width:100%;
