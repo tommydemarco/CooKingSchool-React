@@ -143,4 +143,7 @@
         font-family: sans-serif;
         color: $grey-light;
     } 
+    &__single-column:not(:last-child) {
+        margin-bottom:3rem;  
+    }
 }

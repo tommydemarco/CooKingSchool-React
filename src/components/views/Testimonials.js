@@ -1,6 +1,26 @@
 import React from 'react';
+import TestimonialCardFull from '../cards/TestimonialCardFull';
+import Loader from '../elements/Loader';
+import FetchingError from '../elements/FetchingError';
+import { useConnectAxiosGet } from '../../Hooks/APIConnection';
 
 function Testimonials() {
+    const url = 'https://djshortcats.website/api/cooking/testimonials/';
+    let testimonials = useConnectAxiosGet(url);
+
+    let content = '';
+    if (testimonials.error) {
+        content = <FetchingError errorMessage="404"/>
+    }
+    if (testimonials.isLoading) {
+        content = <Loader />
+    }
+    if (testimonials.data) {
+        content = 
+        testimonials.data.map((testimonial, key) => 
+            <TestimonialCardFull key={key} testimonial={testimonial} />
+        )
+    }
     return (
         <main className="main">
             <div className="testimonials">
@@ -14,62 +34,7 @@ function Testimonials() {
                     </header>
                 </div>
                 <div className="detail sb">
-                    <article className="review column-half">
-                        <blockquote className="review__text">
-                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
-                            dolor. no sea takimata sanctus est Lorem ipsum.
-                        </blockquote>
-                        <div className="review__user">
-                            <img src="/assets/img/user-2.jpg" alt="" class="review__image" />
-                            <div className="review__user-box">
-                                <h4 className="review__user-name">John Doe</h4>
-                                <p className="review__user-location">New-York NY</p>
-                            </div>
-                            <div class="review__rating">9.7</div>
-                        </div>
-                    </article>
-                    <article className="review column-half">
-                        <blockquote className="review__text">
-                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
-                            dolor. no sea takimata sanctus est Lorem ipsum.
-                        </blockquote>
-                        <div className="review__user">
-                            <img src="/assets/img/user-2.jpg" alt="" class="review__image" />
-                            <div className="review__user-box">
-                                <h4 className="review__user-name">John Doe</h4>
-                                <p className="review__user-location">New-York NY</p>
-                            </div>
-                            <div class="review__rating">9.7</div>
-                        </div>
-                    </article>
-                    <article className="review column-half">
-                        <blockquote className="review__text">
-                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
-                            dolor. no sea takimata sanctus est Lorem ipsum.
-                        </blockquote>
-                        <div className="review__user">
-                            <img src="/assets/img/user-2.jpg" alt="" class="review__image" />
-                            <div className="review__user-box">
-                                <h4 className="review__user-name">John Doe</h4>
-                                <p className="review__user-location">New-York NY</p>
-                            </div>
-                            <div class="review__rating">9.7</div>
-                        </div>
-                    </article>
-                    <article className="review column-half">
-                        <blockquote className="review__text">
-                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
-                            dolor. no sea takimata sanctus est Lorem ipsum.
-                        </blockquote>
-                        <div className="review__user">
-                            <img src="/assets/img/user-2.jpg" alt="" class="review__image" />
-                            <div className="review__user-box">
-                                <h4 className="review__user-name">John Doe</h4>
-                                <p className="review__user-location">New-York NY</p>
-                            </div>
-                            <div class="review__rating">9.7</div>
-                        </div>
-                    </article>
+                    {content}
                 </div>
             </div>
         </main>

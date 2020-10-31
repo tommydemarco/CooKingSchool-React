@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function TheFooter() {
     return (
@@ -6,13 +7,13 @@ function TheFooter() {
             <nav className="footer-nav">
                 <ul class="footer-nav__list">
                     <li className="footer-nav__item">
-                        <a href="/" className="footer-nav__link">Cookie policy</a>
+                        <Link to="/cookies-policy" className="footer-nav__link">Cookie policy</Link>
                     </li>
                     <li className="footer-nav__item">
-                        <a href="/" className="footer-nav__link">Privacy policy</a>
+                        <Link to="/privacy-policy" className="footer-nav__link">Privacy policy</Link>
                     </li>
                     <li className="footer-nav__item">
-                        <a href="/" className="footer-nav__link">Contact developer</a>
+                        <a href="https://tommasodemarco.com" className="footer-nav__link">Contact developer</a>
                     </li>
                     <li className="footer-nav__item">
                         <a href="https://github.com/tommydemarco" className="footer-nav__link">View on GitHub</a>

@@ -1,7 +1,28 @@
 import React from 'react';
 import CallToAction from '../elements/CallToAction';
+import TestimonialCard from '../cards/TestimonialCard';
+import Loader from '../elements/Loader';
+import { useConnectAxiosGet } from '../../Hooks/APIConnection';
 
 function TheHome() {
+    const testimonials_url = 'https://djshortcats.website/api/cooking/testimonials/';
+
+    let testimonials = useConnectAxiosGet(testimonials_url);
+
+    let content = '';
+    if (testimonials.error) {
+        content = '';
+    }
+    if (testimonials.isLoading) {
+        content = <Loader />
+    }
+    if (testimonials.data) {
+        testimonials.data = testimonials.data.slice(0, 2)
+        content = 
+        testimonials.data.map((testimonial, key) => 
+            <TestimonialCard key={key} testimonial={testimonial} />
+        )
+    }
     return(
         <main className="main">
             <div className="the-home">
@@ -41,21 +62,8 @@ function TheHome() {
                             <li className="list__item">Communication</li>
                         </ul>
                     </div>
-                    <aside className="user-review">
-                        <article className="review">
-                            <blockquote className="review__text">
-                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
-                                dolor. no sea takimata sanctus est Lorem ipsum.
-                            </blockquote>
-                            <div className="review__user">
-                                <img src="/assets/img/user-2.jpg" alt="" class="review__image" />
-                                <div className="review__user-box">
-                                    <h4 className="review__user-name">John Doe</h4>
-                                    <p className="review__user-location">New-York NY</p>
-                                </div>
-                                <div class="review__rating">9.7</div>
-                            </div>
-                        </article>
+                    <aside className="user-reviews">
+                        {content}
                     </aside>
                 </div>
                 <CallToAction />

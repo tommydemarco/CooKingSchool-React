@@ -485,6 +485,8 @@ html {
     font-size: 8rem;
     font-family: sans-serif;
     color: #b2bec3; }
+  .review__single-column:not(:last-child) {
+    margin-bottom: 3rem; }
 
 .contact-us {
   width: 100%;
