@@ -20,33 +20,34 @@ function App() {
     <div className="app">
       <div className="container">
         <Router>
-          <ScrollToTop />
           <TheHeader />
           <div className="content">
             <TheSideNav />
-            <Switch>
-              <Route exact path="/">
-                <TheHome />
-              </Route>
-              <Route exact path="/courses">
-                <TheCourses />
-              </Route>
-              <Route exact path="/courses/:id">
-                <SingleCourse />
-              </Route>
-              <Route exact path="/testimonials">
-                <Testimonials />
-              </Route>
-              <Route exact path="/contacts">
-                <ContactUs />
-              </Route>
-              <Route exact path="/cookies-policy">
-                <CookiesPolicy />
-              </Route>
-              <Route exact path="/privacy-policy">
-                <PrivacyPolicy />
-              </Route>
-            </Switch>
+            <ScrollToTop>
+              <Switch>
+                <Route exact path="/">
+                  <TheHome />
+                </Route>
+                <Route exact path="/courses">
+                  <TheCourses />
+                </Route>
+                <Route exact path="/courses/:id">
+                  <SingleCourse />
+                </Route>
+                <Route exact path="/testimonials">
+                  <Testimonials />
+                </Route>
+                <Route exact path="/contacts">
+                  <ContactUs />
+                </Route>
+                <Route exact path="/cookies-policy">
+                  <CookiesPolicy />
+                </Route>
+                <Route exact path="/privacy-policy">
+                  <PrivacyPolicy />
+                </Route>
+              </Switch>
+            </ScrollToTop>
           </div>
           <TheFooter />
         </Router>

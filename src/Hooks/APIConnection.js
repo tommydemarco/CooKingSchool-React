@@ -44,7 +44,7 @@ export function useConnectAxiosGet(url) {
                         error: true
                     })
             })
-        }, 1500)
+        }, 1000)
         
     }, [url]);
     return request
