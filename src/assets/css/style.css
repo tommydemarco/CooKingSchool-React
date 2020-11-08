@@ -198,7 +198,7 @@ html {
     z-index: 10;
     transform: scaleY(0);
     background-image: linear-gradient(to right, #1dd1a1, #0abde3);
-    transition: transform .2s ease-in-out, width .5s .2s ease-in-out, background-image .2s; }
+    transition: transform .2s ease-in-out, width .5s .2s ease-in-out, background-image .2s; }
   .side-nav__link:hover::before, .side-nav__link--active::before {
     transform: scaleY(1);
     width: 100%; }
@@ -331,6 +331,21 @@ html {
   .error__message {
     color: white;
     font-size: 1.6rem; }
+
+.cc_b_ok {
+  background-color: #f1f1f1 !important;
+  padding: 1.5rem 4.5rem !important;
+  color: white;
+  margin-right: 1rem !important;
+  text-transform: capitalize !important;
+  font-weight: 400 !important;
+  background-image: linear-gradient(to right, #1dd1a1, #0abde3) !important; }
+
+.cc_b_cp {
+  background-color: lightgray !important;
+  padding: 1.5rem 4.5rem !important;
+  text-transform: capitalize !important;
+  font-weight: 400 !important; }
 
 .heading-1 {
   font-size: 2.5rem;
